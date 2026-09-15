@@ -6,3 +6,8 @@ p{
     color:aqua;
     font-size: 30;
 }
+
+#example-id {
+    color:cornflowerblue;
+    font-size: 10;
+}
