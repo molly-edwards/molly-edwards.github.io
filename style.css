@@ -12,8 +12,8 @@ h1 {
     text-align: center;
 }
 table {
-    width: 100px;
-    max-width:  600px;
+    width: 100%;
+    max-width: 600px;
     margin: 20px auto;
     border-collapse:collapse;
     border:2px solid gray;
