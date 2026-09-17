@@ -1,0 +1,28 @@
+body {
+    background-color: azure;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 40px;
+    color:gray;
+}
+h1 {
+    background-color:rgb(45, 105, 218);
+    color:white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+table {
+
+}
+th,td{
+
+}
+th{
+
+}
+a {
+
+}
+a:hover{
+
+}
