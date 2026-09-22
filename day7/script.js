@@ -1,4 +1,11 @@
-let playerscore = 0;
-const maxhealth = 100;
+let playerHealth = 100;
+const damageAmount = 30;
 
-console.log(playerScore);
+function takeDamage() {
+    playerHealth = playerHealth - damageAmount;
+
+    const healthText = document.getElementById("health-display");
+    const statusText = document.getElementById("staus-message");
+
+    healthText.innerTExt = playerHealth;
+}
