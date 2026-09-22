@@ -15,7 +15,7 @@ function takeDamage() {
     else
     {
         healthText.innerText = 0;
-        statusText.innerText = "Game Over!"
+        statusText.innerText = "Game Over!";
     }
 
 }
