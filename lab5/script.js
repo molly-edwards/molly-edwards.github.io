@@ -27,7 +27,7 @@ function withdraw() {
     }
     else
     {
-        balanceText.innerText = "<14";
+        balanceText.innerText = "0";
         statusText.innerText = "Cannot Overdraft";
         statusText.style.color = "#f14a7d";
         statusText.style.fontWeight = "bold";
