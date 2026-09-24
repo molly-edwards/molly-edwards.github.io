@@ -3,7 +3,7 @@ const depositAmount = 15;
 const withdrawalAmount = 15;
 
 function deposit() {
-    accountBalance = accountBalance + withdrawalAmount;
+    accountBalance = accountBalance + depositAmount;
 
     const healthText = document.getElementById("checking-display");
     const statusText = document.getElementById("status-message");
