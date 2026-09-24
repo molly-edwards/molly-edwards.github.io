@@ -22,7 +22,7 @@ function withdraw() {
     
     if(accountBalance > 14)
     {
-        balanceText.innerText = withdrawAmount;
+        balanceText.innerText = withdrawalAmount;
         statusText.innerText = "Succesfully Withdrew $15"
     }
     else
