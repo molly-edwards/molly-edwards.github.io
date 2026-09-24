@@ -1,5 +1,5 @@
 let playerHealth = 1000;
-const damageAmount = 15;
+const depositAmount = 15;
 
 function deposit() {
     accountBalance = accountBalance + withdrawalAmount;
@@ -12,6 +12,8 @@ function deposit() {
         balanceText.innerText = depositAmount;
         statusText.innerText = "Succesfully Deposited $15";
     }
+let playerHealth = 1000;
+const withdrawalAmount = 15;
 } 
 function withdraw() {
     accountBalance = accountBalance - withdrawalAmount;
@@ -32,6 +34,6 @@ function withdraw() {
 
         document.body.style.backgroundColor = "#5a1a1a";
 
-        document.querySelector("button").disabled = true;
+        document.querySelector("button").disabled = false;
         document.querySelector("button").innerText = "Withdrawal Failed";
     }
