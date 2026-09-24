@@ -1,4 +1,4 @@
-let playerHealth = 1000;
+let accountBalance = 1000;
 const depositAmount = 15;
 const withdrawalAmount = 15;
 
