@@ -5,7 +5,7 @@ const withdrawalAmount = 15;
 function deposit() {
     accountBalance = accountBalance + depositAmount;
 
-    const healthText = document.getElementById("checking-display");
+    const balanceText = document.getElementById("checking-display");
     const statusText = document.getElementById("status-message");
 
     if(accountBalance > 0)
@@ -17,7 +17,7 @@ function deposit() {
 } 
 function withdraw() {
     accountBalance = accountBalance - withdrawalAmount;
-    const healthText = document.getElementById("checking-display");
+    const balanceText = document.getElementById("checking-display");
     const statusText = document.getElementById("status-message");
     
     if(accountBalance > 14)
