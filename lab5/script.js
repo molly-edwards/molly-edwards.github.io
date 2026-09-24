@@ -10,7 +10,7 @@ function deposit() {
 
     if(accountBalance > 0)
     {
-        balanceText.innerText = depositAmount;
+        balanceText.innerText = accountBalance;
         statusText.innerText = "Succesfully Deposited $15";
     }
 
@@ -22,7 +22,7 @@ function withdraw() {
     
     if(accountBalance > 14)
     {
-        balanceText.innerText = withdrawalAmount;
+        balanceText.innerText = accountBalance;
         statusText.innerText = "Succesfully Withdrew $15"
     }
     else
