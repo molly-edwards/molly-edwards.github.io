@@ -1,4 +1,4 @@
-let accountBalance = 1000;
+let accountBalance = 100;
 const depositAmount = 15;
 const withdrawalAmount = 15;
 
@@ -34,6 +34,7 @@ function withdraw() {
 
         document.body.style.backgroundColor = "#5a1a1a";
 
+        const balanceText = document.getElementById("withdrawalerror");
         document.querySelector("button").disabled = false;
         document.querySelector("button").innerText = "Withdrawal Failed";
     }
