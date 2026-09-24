@@ -1,5 +1,6 @@
 let playerHealth = 1000;
 const depositAmount = 15;
+const withdrawalAmount = 15;
 
 function deposit() {
     accountBalance = accountBalance + withdrawalAmount;
@@ -12,8 +13,7 @@ function deposit() {
         balanceText.innerText = depositAmount;
         statusText.innerText = "Succesfully Deposited $15";
     }
-let playerHealth = 1000;
-const withdrawalAmount = 15;
+
 } 
 function withdraw() {
     accountBalance = accountBalance - withdrawalAmount;
@@ -26,8 +26,8 @@ function withdraw() {
         statusText.innerText = "Succesfully Withdrew $15"
     }
     else
-    
-        balanceText.innerText = <14;
+    {
+        balanceText.innerText = "<14";
         statusText.innerText = "Cannot Overdraft";
         statusText.style.color = "#f14a7d";
         statusText.style.fontWeight = "bold";
@@ -37,3 +37,4 @@ function withdraw() {
         document.querySelector("button").disabled = false;
         document.querySelector("button").innerText = "Withdrawal Failed";
     }
+}
