@@ -2,10 +2,10 @@ body {
     background-color:white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 40px;
-    color: rgb(245, 242, 242);
+    color: black;
 }
 h1 {
-    background-color: rgb(15, 15, 91);
+    background-color: lightblue;
     color: black;
     padding:30px;
     border-radius: 15px;
@@ -19,7 +19,7 @@ table{
     border:2px solid black;
 }
 th,td{
-    border: 2px;
+    border: 2px solid gray;
     padding: 12px;
     text-align: left;
 }
