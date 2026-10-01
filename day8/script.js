@@ -1,4 +1,4 @@
-const constants = [
+const contents = [
     "Health Potion",
     "Sword",
     "Shield",
