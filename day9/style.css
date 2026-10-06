@@ -1,0 +1,221 @@
+
+:root {
+  --garnet: #73000a;
+  --dark-garnet: #4f0007;
+  --black: #101010;
+  --white: #ffffff;
+  --cream: #fff8f0;
+  --gold: #f4c542;
+  --gray: #e8e8e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(135deg, rgba(115, 0, 10, 0.92), rgba(16, 16, 16, 0.95)),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 48px,
+      rgba(255, 255, 255, 0.08) 49px,
+      transparent 50px
+    );
+}
+
+/* Football-inspired field lines */
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  opacity: 0.35;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 19%,
+      white 20%,
+      transparent 21%,
+      transparent 39%,
+      white 40%,
+      transparent 41%,
+      transparent 59%,
+      white 60%,
+      transparent 61%,
+      transparent 79%,
+      white 80%,
+      transparent 81%
+    );
+}
+
+.container {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 36px;
+  border: 5px solid var(--gold);
+  border-radius: 18px;
+  background-color: var(--cream);
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+header {
+  margin-bottom: 32px;
+  padding: 25px;
+  border-radius: 12px;
+  color: var(--white);
+  text-align: center;
+  background: var(--garnet);
+  border: 4px solid var(--black);
+}
+
+header::before {
+  display: block;
+  margin-bottom: 10px;
+  content: "🏈";
+  font-size: 3rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  text-transform: uppercase;
+}
+
+header p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+section {
+  margin-top: 25px;
+  padding: 24px;
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  background-color: var(--white);
+}
+
+h2 {
+  color: var(--garnet);
+  font-size: 1.5rem;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input[type="text"]:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 12px 16px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  color: var(--white);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--garnet);
+}
+
+button:hover,
+button:focus-visible {
+  background-color: var(--dark-garnet);
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+#checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 2px solid var(--gray);
+}
+
+#checklist li:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--garnet);
+}
+
+#checklist label {
+  flex: 1;
+}
+
+#checklist input[type="checkbox"]:checked + label {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.remove-button {
+  padding: 7px 10px;
+  border-color: var(--garnet);
+  color: var(--garnet);
+  background-color: var(--white);
+}
+
+.remove-button:hover,
+.remove-button:focus-visible {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  #checklist li {
+    flex-wrap: wrap;
+  }
+
+  .remove-button {
+    margin-left: auto;
+  }
+}
