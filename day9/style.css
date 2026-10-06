@@ -1,12 +1,12 @@
 
 :root {
   --garnet: #73000a;
-  --dark-garnet: #4f0007;
-  --black: #101010;
-  --white: #ffffff;
-  --cream: #fff8f0;
+  --dark-garnet: #510008;
+  --black: #151515;
+  --cream: #fff8f2;
+  --pink: #ffe4e6;
   --gold: #f4c542;
-  --gray: #e8e8e8;
+  --white: #ffffff;
 }
 
 * {
@@ -19,97 +19,86 @@ body {
   padding: 40px 20px;
   color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
-  background:
-    linear-gradient(135deg, rgba(115, 0, 10, 0.92), rgba(16, 16, 16, 0.95)),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 48px,
-      rgba(255, 255, 255, 0.08) 49px,
-      transparent 50px
-    );
-}
-
-/* Football-inspired field lines */
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  opacity: 0.35;
-  background:
-    linear-gradient(
-      to bottom,
-      transparent 19%,
-      white 20%,
-      transparent 21%,
-      transparent 39%,
-      white 40%,
-      transparent 41%,
-      transparent 59%,
-      white 60%,
-      transparent 61%,
-      transparent 79%,
-      white 80%,
-      transparent 81%
-    );
+  background-color: var(--pink);
+  background-image:
+    radial-gradient(var(--gold) 1px, transparent 1px),
+    radial-gradient(var(--garnet) 1px, transparent 1px);
+  background-position: 0 0, 14px 14px;
+  background-size: 28px 28px;
 }
 
 .container {
   width: min(100%, 700px);
   margin: 0 auto;
-  padding: 36px;
-  border: 5px solid var(--gold);
-  border-radius: 18px;
+  padding: 34px;
+  border: 5px solid var(--black);
+  border-radius: 28px;
   background-color: var(--cream);
-  box-shadow: 10px 10px 0 var(--black);
+  box-shadow: 10px 10px 0 var(--garnet);
 }
 
 header {
-  margin-bottom: 32px;
-  padding: 25px;
-  border-radius: 12px;
+  position: relative;
+  margin-bottom: 28px;
+  padding: 28px 24px;
+  overflow: hidden;
+  border: 4px solid var(--black);
+  border-radius: 20px;
   color: var(--white);
   text-align: center;
-  background: var(--garnet);
-  border: 4px solid var(--black);
+  background: linear-gradient(135deg, var(--garnet), var(--dark-garnet));
 }
 
 header::before {
   display: block;
-  margin-bottom: 10px;
-  content: "🏈";
-  font-size: 3rem;
+  margin-bottom: 8px;
+  content: "🐔 🏈 🐔";
+  font-size: 2.5rem;
+}
+
+header::after {
+  position: absolute;
+  right: -15px;
+  bottom: -30px;
+  content: "GAMECOCK";
+  color: rgba(255, 255, 255, 0.12);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  font-weight: bold;
+  transform: rotate(-10deg);
 }
 
 h1,
 h2 {
-  margin-top: 0;
   font-family: Georgia, "Times New Roman", serif;
 }
 
 h1 {
-  margin-bottom: 10px;
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  position: relative;
+  z-index: 1;
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 6vw, 3.4rem);
   text-transform: uppercase;
 }
 
 header p {
-  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  margin: 0;
   font-weight: bold;
 }
 
 section {
-  margin-top: 25px;
+  margin-top: 22px;
   padding: 24px;
-  border: 2px solid var(--black);
-  border-radius: 12px;
+  border: 3px solid var(--black);
+  border-radius: 18px;
   background-color: var(--white);
 }
 
 h2 {
+  margin-top: 0;
   color: var(--garnet);
-  font-size: 1.5rem;
 }
 
 form {
@@ -125,7 +114,7 @@ input[type="text"] {
   width: 100%;
   padding: 13px;
   border: 2px solid var(--black);
-  border-radius: 8px;
+  border-radius: 10px;
   font: inherit;
 }
 
@@ -137,7 +126,7 @@ input[type="text"]:focus {
 button {
   padding: 12px 16px;
   border: 2px solid var(--black);
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--white);
   font: inherit;
   font-weight: bold;
@@ -163,16 +152,21 @@ button:focus-visible {
   align-items: center;
   gap: 12px;
   padding: 14px 0;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 2px dashed #e5c9cb;
 }
 
 #checklist li:last-child {
   border-bottom: 0;
 }
 
+#checklist li::before {
+  content: "🐔";
+  font-size: 1.25rem;
+}
+
 input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   accent-color: var(--garnet);
 }
 
@@ -189,7 +183,7 @@ input[type="checkbox"] {
   padding: 7px 10px;
   border-color: var(--garnet);
   color: var(--garnet);
-  background-color: var(--white);
+  background-color: var(--pink);
 }
 
 .remove-button:hover,
