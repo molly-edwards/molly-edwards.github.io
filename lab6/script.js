@@ -20,9 +20,6 @@ welcome: `
       Select one of the buttons on the left to explore your student resources.
     </p>
 
-    <button class="garnet-button" data-go-to="dining">
-      Explore Dining Options
-    </button>
   </section>
 `,
 
