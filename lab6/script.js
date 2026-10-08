@@ -2,22 +2,29 @@ const mainContent = document.getElementById("main-content");
 const navButtons = document.querySelectorAll(".nav-button");
 
 const pages = {
-  welcome: `
-    <section class="welcome-card">
-      <h2>Welcome to the Portal!</h2>
-      <p>
-        Welcome, Gamecocks! This student portal is your place to find dining
-        choices, athletics events, academic information, and ways to get
-        involved on campus.
-      </p>
-      <p>
-        Select one of the buttons on the left to explore your student resources.
-      </p>
-      <button class="garnet-button" data-go-to="dining">
-        Explore Dining Options
-      </button>
-    </section>
-  `,
+welcome: `
+  <section class="welcome-card">
+    <img
+      class="campus-hero"
+      src="https://sc.edu/imgs/background/background_bigoaktree.jpg"
+      alt="Students walking on the University of South Carolina Horseshoe"
+    >
+
+    <h2>Welcome to the Portal!</h2>
+    <p>
+      Welcome, Gamecocks! This student portal is your place to find dining
+      choices, athletics events, academic information, and ways to get
+      involved on campus.
+    </p>
+    <p>
+      Select one of the buttons on the left to explore your student resources.
+    </p>
+
+    <button class="garnet-button" data-go-to="dining">
+      Explore Dining Options
+    </button>
+  </section>
+`,
 
   dining: `
     <section>
