@@ -25,4 +25,8 @@ function buyKeyboard()
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " cookies";
+
+    document.getElementById("power-display").innerText = clickPower;
+    document.getElementById("cost-display").innerText = upgradeCost;
+    
 }
