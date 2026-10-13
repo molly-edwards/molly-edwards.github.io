@@ -11,8 +11,18 @@ function writeCode()
     linesOfCode = linesOfCode + clickPower;
     updateScreen();
 }
+function buyKeyboard()
+{
+    if(linesOfCode >= upgradeCost)
+    {
+        linesOfCode = linesOfCode - upgradeCost;
+        clickPower = clickPower +1;
+        upgradeCost = upgradeCost * 1.5;
+        updateScreen();
+    }
+}
 
 function updateScreen()
 {
-    document.getElementByID("score-display").innerText = linesOfCode + " cookies";
+    document.getElementById("score-display").innerText = linesOfCode + " cookies";
 }
