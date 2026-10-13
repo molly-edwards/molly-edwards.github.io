@@ -1,0 +1,27 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:darkcyan;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+#game-container {
+   background-color: palevioletred;
+   max-width: 450px;
+   margin: 0 auto;
+   padding: 30px;
+   border-radius: 12px;
+   box-shadow: 0 8px 16px gainsboro;
+}
+ 
+#main-button {
+    font-size: 24px;
+    padding: 20px, 40px;
+    margin: 20px 0;
+    background-color: darkseagreen;
+    color: white;
+    border: none;
+    bo
+}
