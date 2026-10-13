@@ -40,7 +40,7 @@ function updateScreen()
     document.getElementById("power-display").innerText = clickPower;
     document.getElementById("cost-display").innerText = upgradeCost;
 
-    doument.getElementById("intern-display").innerText = interns;
+    document.getElementById("intern-display").innerText = interns;
     document.getElementById("intern-display-cost").innerText = internCost;
 }
 
