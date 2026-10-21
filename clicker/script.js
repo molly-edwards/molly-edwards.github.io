@@ -60,9 +60,10 @@ function saveLevel() {
 }
 
 function loadLevel() {
-    const retrievedData = localStorage.getItem("savedCookies");
+    let retrievedData = localStorage.getItem("savedCookies");
 
-    if (retrievedData !== null) {
+    if (retrievedData !== null) 
+    {
         linesOfCode = Number(retrievedData);
         updateScreen();
     } else {
