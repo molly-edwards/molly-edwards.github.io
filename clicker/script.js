@@ -54,24 +54,18 @@ setInterval(function() {
 1000
 );
 
-function saveLevel()
-{
-    localStorage.setItem("savedLevel", currentLevel);
-    alert("Level data saved!");
+function saveLevel() {
+    localStorage.setItem("savedCookies", linesOfCode);
+    alert("Cookies saved!");
 }
 
-function loadLevel()
-{
-    let retrievedData = localStorage.getItem("savedLevel");
+function loadLevel() {
+    const retrievedData = localStorage.getItem("savedCookies");
 
-    if(retrievedData !== null)
-    {
-        currentLevel=retrievedData;
-        document.getElementById("level").innerText = currentLevel;
-
-    }
-    else
-    {
-        alert("No saved data found...");
+    if (retrievedData !== null) {
+        linesOfCode = Number(retrievedData);
+        updateScreen();
+    } else {
+        alert("No saved cookies found.");
     }
 }
