@@ -18,17 +18,23 @@
                 <button id="upgrade-button" onClick="buyKeyboard()">
                     Buy Oven (Cost:<span id="cost-display">50</span>)
                 </button>
+                <button id="factory-button" onClick="buyFactory()">
+                    Buy Factory (Cost:<span id="cost-factory-display">300</span>)
+                </button>
                 
                 <h3>Hiring Department (Auto Clicking)</h3>
                 <p>Active Grandmas: <span id="intern-display">0</span></p>
                 <button id="intern-button" onClick="buyIntern()">
                     Hire Grandma (Cost:<span id="cost-intern-display">100</span>)
                 </button>
-
+                <button id="chef-button" onClick="buyChef()">
+                    Hire Chef (Cost:<span id="cost-chef-display">1000</span>)
+                </button>
+                
                 <div class="box">
-            <h3>Local Storage (Cookies Baked)</h3>
-            <button onclick="saveLevel()">Save</button>
-            <button onclick="loadLevel()">Load</button>
+                <h3>Local Storage (Cookies Baked)</h3>
+                <button onclick="saveLevel()">Save</button>
+                <button onclick="loadLevel()">Load</button>
                  </div>
             </main>
         </div>
