@@ -1,10 +1,15 @@
 let linesOfCode = 0;
 
 let clickPower = 1;
+let doublePower = 2;
 let upgradeCost = 50;
+let factoryCost = 300;
 
 let interns = 0;
 let internCost = 100;
+
+let chef = 0;
+let chefCost = 1000;
 
 function writeCode()
 {
@@ -21,6 +26,20 @@ function buyKeyboard()
         updateScreen();
     }
 }
+
+function buyFactory()
+{
+    if(linesofCode >= factoryCost)
+    {linesOfCode = linesOfCode + doublePower;
+    doublePowr = doublePower +1;
+    upgradeCost = upgradeCost *1.5;
+    updateScreen();
+    }
+}
+
+
+
+
 
 function buyIntern()
 {
@@ -39,6 +58,10 @@ function updateScreen()
 
     document.getElementById("power-display").innerText = clickPower;
     document.getElementById("cost-display").innerText = upgradeCost;
+
+    document.getElementById("buy-factory").innerText = factoryCost;
+
+
 
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("cost-intern-display").innerText = internCost;
