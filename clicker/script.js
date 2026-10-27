@@ -40,9 +40,6 @@ function buyFactory()
 }
 
 
-
-
-
 function buyIntern()
 {
     if(linesOfCode >= internCost)
@@ -98,14 +95,8 @@ setInterval(function(){
         updateScreen();
     }
 },
-2000
+500
 );
-
-
-
-
-
-
 
 
 function saveLevel() {
