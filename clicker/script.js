@@ -9,7 +9,7 @@ let interns = 0;
 let internCost = 100;
 
 let chef = 0;
-let chefCost = 1000;
+let chefCost = 350;
 
 function writeCode()
 {
