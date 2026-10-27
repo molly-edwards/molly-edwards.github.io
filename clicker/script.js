@@ -29,7 +29,7 @@ function buyKeyboard()
 
 function buyFactory()
 {
-    if(linesofCode >= factoryCost)
+    if(linesOfCode >= factoryCost)
     {linesOfCode = linesOfCode + doublePower;
     doublePowr = doublePower +1;
     upgradeCost = upgradeCost *1.5;
