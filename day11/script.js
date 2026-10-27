@@ -1,5 +1,5 @@
 let score = 0;
-let timeleft = 10;
+let timeLeft = 10;
 let timerId = null;
 
 const timeDisplay = document.getElementById("time-display");
@@ -16,26 +16,27 @@ function startGame()
 
     startButton.disabled = true;
     targetElement.style.display = "block";
-    
-    
+
     timerId = setInterval(countdown, 1000);
 }
-
-
-
 
 function countdown() 
 {
     timeLeft--; //timeLeft = timeLeft - 1;
     timeDisplay.innerText = timeLeft;
+
+    if(timeLeft <= 0)
+    {
+        endGame();
+    }
 }
 
 function hitTarget()
 {
     score++;    //score = score + 1;
     scoreDisplay.innerText = score;
+    moveTarget();
 }
-
 
 function moveTarget()
 {
@@ -45,11 +46,6 @@ function moveTarget()
     targetElement.style.left = randomX + "px";
     targetElement.style.top = randomY + "px";
 }
-
-
-
-
-
 
 function endGame()
 {
