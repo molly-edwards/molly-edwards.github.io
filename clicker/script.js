@@ -1,7 +1,6 @@
 let linesOfCode = 0;
 
 let clickPower = 1;
-let doublePower = 2;
 
 let upgradeCost = 50;
 let factoryCost = 300;
@@ -33,7 +32,7 @@ function buyFactory()
     if(linesOfCode >= factoryCost)
     {
         linesOfCode = linesOfCode - factoryCost;
-        doublePowr = doublePower +1;
+        clickPower = clickPower +2;
         factoryCost = factoryCost * 1.5;
         updateScreen();
     }
