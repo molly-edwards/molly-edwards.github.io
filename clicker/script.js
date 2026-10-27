@@ -70,6 +70,9 @@ function updateScreen()
 
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("cost-intern-display").innerText = internCost;
+
+    document.getElementById("chef-display").innerText = chef;
+    document.getElementById("cost-chef-display").innerText = chefCost;
 }
 
 setInterval(function() {
