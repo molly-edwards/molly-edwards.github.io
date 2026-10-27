@@ -2,6 +2,7 @@ let linesOfCode = 0;
 
 let clickPower = 1;
 let doublePower = 2;
+
 let upgradeCost = 50;
 let factoryCost = 300;
 
@@ -30,10 +31,11 @@ function buyKeyboard()
 function buyFactory()
 {
     if(linesOfCode >= factoryCost)
-    {linesOfCode = linesOfCode + doublePower;
-    doublePowr = doublePower +1;
-    upgradeCost = upgradeCost *1.5;
-    updateScreen();
+    {
+        linesOfCode = linesOfCode - factoryCost;
+        doublePowr = doublePower +1;
+        factoryCost = factoryCost * 1.5;
+        updateScreen();
     }
 }
 
@@ -48,6 +50,17 @@ function buyIntern()
         linesOfCode = linesOfCode - internCost;
         interns = interns + 1;
         internCost = internCost * 1.5;
+        updateScreen()
+    }
+}
+
+function buyChef()
+{
+    if(linesOfCode >= chefCost)
+    {
+        linesOfCode = linesOfCode - chefCost;
+        chef = chef + 1;
+        chefCost = chefCost * 1.5;
         updateScreen()
     }
 }
@@ -76,6 +89,24 @@ setInterval(function() {
 },
 1000
 );
+
+
+setInterval(function(){
+    if(chef> 0)
+    {
+        linesOfCode = linesOfCode + chef;
+        updateScreen();
+    }
+},
+2000
+);
+
+
+
+
+
+
+
 
 function saveLevel() {
     localStorage.setItem("savedCookies", linesOfCode);
