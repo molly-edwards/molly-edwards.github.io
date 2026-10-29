@@ -18,7 +18,7 @@ function triggerBug2() {
 
 function triggerBug3() {
     let outputText = document.getElementById(output3); 
-    let outputText.innerText = "Code Fixed!";
+    outputText.innerText = "Code Fixed!";
     
     let btn = document.getElementById("btn3");
     btn.innerText = "Done";
@@ -29,7 +29,7 @@ function triggerBug4() {
     let studentName = "Cocky";
     let outputText = document.getElementById("output4");
     
-    outputText.innerText = studentName + " is here!"; 
+    outputText.innerText = studentname + " is here!"; 
     
     let btn = document.getElementById("btn4");
     btn.innerText = "Done";
