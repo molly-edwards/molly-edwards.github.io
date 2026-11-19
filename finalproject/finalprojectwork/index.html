@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Lifestyle Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Healthy Lifestyle Project</h1>
+    <p>A place to organize your health, schoolwork, and daily routines.</p>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#macros">Macros</a>
+      <a href="#workouts">Workouts</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#habits">Healthy Habits</a>
+    </nav>
+  </header>
+
+  <main>
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <!-- Introduction -->
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>
+        This website helps you build a healthy and organized lifestyle.
+        Track your meals and workouts, organize assignments, and keep
+        up with healthy habits.
+      </p>
+
+      <div class="cards">
+        <article>
+          <h3>Track Your Macros</h3>
+          <p>Record foods and their protein, carbohydrates, and fat.</p>
+          <a href="#macros">Open Macro Tracker</a>
+        </article>
+
+        <article>
+          <h3>Track Your Workouts</h3>
+          <p>Keep a record of exercises, sets, and repetitions.</p>
+          <a href="#workouts">Open Workout Tracker</a>
+        </article>
+
+        <article>
+          <h3>Manage Assignments</h3>
+          <p>Add assignments, attach files, and track due dates.</p>
+          <a href="#assignments">Open Assignment Planner</a>
+        </article>
+
+        <article>
+          <h3>Build Healthy Habits</h3>
+          <p>Create a daily checklist and explore helpful resources.</p>
+          <a href="#habits">Open Healthy Habits</a>
+        </article>
+      </div>
+
+      <p class="note">
+        Your entries save in this browser on this device.
+        Clearing browser data removes saved entries.
+        Attached assignments are stored locally and are not submitted to school.
+      </p>
+    </section>
+
+    <!-- Macro tracker -->
+    <section id="macros" hidden>
+      <h2>Macro Tracker</h2>
+
+      <form id="macro-form">
+        <label>
+          Date
+          <input type="date" name="date" required>
+        </label>
+
+        <label>
+          Food
+          <input type="text" name="food" placeholder="Greek yogurt" required>
+        </label>
+
+        <label>
+          Protein (g)
+          <input type="number" name="protein" min="0" step="0.1" required>
+        </label>
+
+        <label>
+          Carbohydrates (g)
+          <input type="number" name="carbs" min="0" step="0.1" required>
+        </label>
+
+        <label>
+          Fat (g)
+          <input type="number" name="fat" min="0" step="0.1" required>
+        </label>
+
+        <button type="submit">Add Food</button>
+      </form>
+
+      <div class="actions">
+        <button type="button" data-save="macros">Save Macros</button>
+        <button type="button" data-load="macros">Load Macros</button>
+
+        <label>
+          View Date
+          <input type="date" id="macro-date" required>
+        </label>
+      </div>
+
+      <p id="macro-totals"></p>
+      <ul id="macro-list" class="entries"></ul>
+    </section>
+
+    <!-- Workout tracker -->
+    <section id="workouts" hidden>
+      <h2>Workout Tracker</h2>
+
+      <form id="workout-form">
+        <label>
+          Date
+          <input type="date" name="date" required>
+        </label>
+
+        <label>
+          Exercise
+          <input type="text" name="exercise" placeholder="Squats" required>
+        </label>
+
+        <label>
+          Sets
+          <input type="number" name="sets" min="1" step="1" required>
+        </label>
+
+        <label>
+          Repetitions per Set
+          <input type="number" name="reps" min="1" step="1" required>
+        </label>
+
+        <label>
+          Weight in Pounds (optional)
+          <input type="number" name="weight" min="0" step="0.1">
+        </label>
+
+        <button type="submit">Add Exercise</button>
+      </form>
+
+      <div class="actions">
+        <button type="button" data-save="workouts">Save Workouts</button>
+        <button type="button" data-load="workouts">Load Workouts</button>
+      </div>
+
+      <ul id="workout-list" class="entries"></ul>
+    </section>
+
+    <!-- Assignment planner -->
+    <section id="assignments" hidden>
+      <h2>Assignment Planner</h2>
+
+      <form id="assignment-form">
+        <label>
+          Assignment Name
+          <input type="text" name="title" required>
+        </label>
+
+        <label>
+          Class
+          <input type="text" name="course" required>
+        </label>
+
+        <label>
+          Due Date
+          <input type="date" name="due" required>
+        </label>
+
+        <label>
+          Attach File (optional, maximum 1 MB)
+          <input type="file" name="attachment">
+        </label>
+
+        <button type="submit">Add Assignment</button>
+      </form>
+
+      <div class="actions">
+        <button type="button" data-save="assignments">Save Assignments</button>
+        <button type="button" data-load="assignments">Load Assignments</button>
+      </div>
+
+      <ul id="assignment-list" class="entries"></ul>
+    </section>
+
+    <!-- Healthy habits -->
+    <section id="habits" hidden>
+      <h2>Healthy Habits</h2>
+      <p>Add a habit and check it off for each day you complete it.</p>
+
+      <form id="habit-form">
+        <label>
+          Habit
+          <input
+            type="text"
+            name="title"
+            placeholder="Take a study break"
+            required
+          >
+        </label>
+
+        <button type="submit">Add Habit</button>
+      </form>
+
+      <div class="actions">
+        <button type="button" data-save="habits">Save Habits</button>
+        <button type="button" data-load="habits">Load Habits</button>
+
+        <label>
+          Checklist Date
+          <input type="date" id="habit-date" required>
+        </label>
+      </div>
+
+      <ul id="habit-list" class="entries"></ul>
+
+      <h3>Helpful Resources</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.cdc.gov/physical-activity-basics/about/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >CDC Physical Activity Basics</a>
+        </li>
+        <li>
+          <a
+            href="https://www.cdc.gov/sleep/about/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >CDC Sleep Resources</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Healthy Lifestyle Project</p>
+  </footer>
+</body>
+</html>
